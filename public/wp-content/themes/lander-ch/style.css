@@ -1,0 +1,10 @@
+/**
+Theme name: Lander page for Simone
+Description: Child Theme of Simone that adds a custom one-page style front page
+Author: Morten Rand-Hendriksen
+Version:0.1
+Template: Simone
+*/
+
+/*import style from parent theme*/
+@import url('../simone/style.css');

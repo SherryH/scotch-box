@@ -20,6 +20,8 @@
 		}
 	
 		add_action( 'wp_enqueue_scripts', 'lander_scripts' );
+
+		add_image_size( 'testimonial-mug', 253, 253, true ); //now when an image is uploaded, wordpress will crop it to 253x253
 			
 
 

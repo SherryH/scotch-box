@@ -7,6 +7,10 @@
 
 get_header(); ?>
 
+<?php 
+global $more;
+ ?>
+
 	<div id="primary" class="content-area lander-page">
 		<main id="main" class="site-main" role="main">
 		<section id="call-to-action">
@@ -29,7 +33,37 @@ get_header(); ?>
 		</section>
 		<section id="testimonials">
 			<div class="indent">
-				testimonials
+				<?php 
+					$args = array(
+						'posts_per_page'=>3,
+						'orderby'=>rand,
+						'category_name'=> 'testimonials' //slugs, not really names
+						);
+					$query = new WP_Query($args);
+					// The Loop
+					if ( $query->have_posts() ) {
+						echo '<ul class="testimonials">';
+						while ( $query->have_posts() ) {
+							$query->the_post();
+							$more =0; //set more variable to false, it will only display content before $more
+							echo '<li class="clear">';
+							echo '<figure class="testimonial-thumb">';
+							the_post_thumbnail('testimonial-mug'); //set in functions.php
+							echo '</figure>';
+							echo '<aside class="testimonial-text">';
+							echo '<h3 class="testimonial-name">' . get_the_title() . '</h3>';
+							echo '<div class="testimonial-excerpt">';
+							the_content('');
+							echo '</div>';
+							echo '</aside>';
+							echo '</li>';
+						}
+						echo '</ul>';
+					}
+
+					/* Restore original Post Data */
+					wp_reset_postdata();
+				 ?>
 			<div class="indent">
 		</section>
 		<section id="services">
@@ -43,6 +77,7 @@ get_header(); ?>
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) {
 						$query->the_post();
+						$more = 0;
 						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
 						echo '<div class="entry-content">';
 						the_content('');
@@ -66,6 +101,7 @@ get_header(); ?>
 					echo '<ul class="services-list">';
 					while ($products_query->have_posts()) {
 						$products_query->the_post();
+						$more =0;
 						echo '<li class="clear">';
 						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 						echo '<h3 class="services-title">' . get_the_title() . '</h3>';

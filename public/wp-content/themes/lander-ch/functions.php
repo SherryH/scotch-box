@@ -16,6 +16,7 @@
 			if (is_front_page()){
 
 				wp_enqueue_style( 'lander-style', get_stylesheet_directory_uri().'/lander-style.css');
+				wp_enqueue_script( 'lander-script', get_stylesheet_directory_uri().'/js/landerscripts.js', array('jquery'), 20150714);
 			}
 		}
 	
@@ -27,7 +28,7 @@
 		function exclude_testimonials($query){
 			//if query is not the category testimonials and query is the main query
 			if (!$query->is_category('testimonials') && $query->is_main_query()){
-				$query->set('cat','-4'); //want to exclude category with ID=5 (ID of testimonials category)
+				$query->set('cat','-4'); //want to exclude category with ID=4 (ID of testimonials category)
 
 			}
 		}

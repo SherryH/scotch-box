@@ -391,10 +391,9 @@ a:active {
     display: block;
     width: 100%;
     clear: both;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
     text-transform: uppercase;
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background: white;
 }
 
 .main-navigation ul {
@@ -410,13 +409,14 @@ a:active {
 
 .main-navigation a {
     display: block;
-    padding: 1.3em 1em;
+    padding: 1em 1em;
     font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     text-decoration: none;
     line-height: 1.3em;
-    color: white;
-    color: hsl(0, 0%, 100%);
+    color: gray;
+    color: hsl(0, 0%, 10%);
 }
 
 .main-navigation ul ul {
@@ -520,7 +520,7 @@ a:active {
 
     .main-navigation li { float: none; }
 
-    .main-navigation li a { padding: 1.3em 2em; }
+    .main-navigation li a { padding: 1.3em 2em;}
 
     .main-navigation li li a { padding-left: 4em; }
 
@@ -858,28 +858,8 @@ a:focus.page-numbers{
     border: solid 1px hsla(0, 0%, 100%, .3);
 }
 
-.site-title {
-    font-weight: 700;
-    font-size: 40px;
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    line-height: normal;
-    padding-bottom: 1rem;
-}
-
-.site-description {
-    font-weight: 300;
-    font-size: 20px;
-    font-size: 2rem;
-}
 
 .site-branding a { text-decoration: none; }
-
-.site-title a,
-.site-description { 
-    color: #fff;
-    color: hsl(0, 0%, 100%);
-}
 
 .header-image img {
     display: block;

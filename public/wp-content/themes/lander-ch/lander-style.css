@@ -10,6 +10,10 @@
 .shifted { /*apply to rest of the content, leave width of the header*/
     margin-top: 54px;
 }
+
+.no-img-gap{
+    display: block;
+}
                 
 
 @media screen and (max-width: 1539px) and (min-width: 1160px){ 
@@ -29,6 +33,10 @@
 .indent {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.section-link{
+    color: red;
 }
 
 
@@ -83,6 +91,7 @@
 .content-area {
     background: #fff;
     background: hsl(0, 0%, 100%);
+    text-align: center; 
 }
 				
 

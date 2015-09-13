@@ -12,6 +12,13 @@
 		 * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
 		 * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
 		 */
+
+		function load_skeleton_css(){
+				wp_enqueue_style( 'skeleton-style', get_stylesheet_directory_uri().'/css/skeleton.css');
+				wp_enqueue_style( 'normal-style', get_stylesheet_directory_uri().'/css/normalize.css');
+		}
+		add_action( 'wp_enqueue_scripts', 'load_skeleton_css' );
+
 		function lander_scripts() {
 			if (is_front_page()){
 				wp_enqueue_style( 'lander-style', get_stylesheet_directory_uri().'/lander-style.css');
@@ -20,13 +27,6 @@
 		}
 	
 		add_action( 'wp_enqueue_scripts', 'lander_scripts' );
-
-		function load_skeleton_css(){
-				wp_enqueue_style( 'skeleton-style', get_stylesheet_directory_uri().'/css/skeleton.css');
-				wp_enqueue_style( 'normal-style', get_stylesheet_directory_uri().'/css/normalize.css');
-		}
-		add_action( 'wp_enqueue_scripts', 'load_skeleton_css' );
-
 
 		
 		add_image_size( 'testimonial-mug', 253, 253, true ); //now when an image is uploaded, wordpress will crop it to 253x253 -but if image is smaller, it wont be expanded to fit 253x253

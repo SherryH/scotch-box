@@ -152,10 +152,11 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 900;
-    font-family: 'Lato', sans-serif;
-    color: #000;
-    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+    color: #5A5454;
+    /*color: hsl(0, 0%, 0%);*/
     -ms-word-break: break-word;
     word-break: break-word;
 }
@@ -415,8 +416,8 @@ a:active {
     font-size: 1.8rem;
     text-decoration: none;
     line-height: 1.3em;
-    color: gray;
-    color: hsl(0, 0%, 10%);
+    color: #8C8888;
+    /*color: hsl(0, 0%, 10%);*/
 }
 
 .main-navigation ul ul {
@@ -463,8 +464,10 @@ a:active {
 .main-navigation .current-menu-item > a:hover,
 .main-navigation .current_page_item > a:focus,
 .main-navigation .current-menu-item > a:focus {
-    color: #313131;
-    color: hsl(0, 0%, 19%);
+    color: #8C8888;
+    /*color: #313131;
+    color: hsl(0, 0%, 19%);*/
+    /*color: hsla(0, 0%, 0%, 0.57);*/
     background: white;
 }
 
@@ -479,6 +482,20 @@ a:active {
     color: hsl(0, 0%, 100%);
     background: #313131;
     background: hsl(0, 0%, 19%);
+}
+
+/*main nav menu individual menu item styling*/
+.menu-font-s{
+    font-size: 0.6em;
+    margin-top: 0.1em;
+    padding-top: 0.1em;
+    text-align: center;
+}
+
+.logo{
+    display: inline-block;
+    width: 350px;
+    height: auto;
 }
 
 /* Small menu */
@@ -1101,6 +1118,10 @@ a:focus.page-numbers{
 
 .entry-content a { text-decoration: underline; }
 
+.entry-content::before{
+    margin-top: 4rem;
+}
+
 /* Typography */
 .entry-content h1,
 .entry-content h2,
@@ -1139,12 +1160,17 @@ a:focus.page-numbers{
     font-size: 2.2rem;
 }
 
+.entry-content .font-thin {
+    font-weight: 300;
+}
+
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
     font-size: 20px;
     font-size: 2rem;
-    line-height: 1.6em;
+    line-height: 2.6em;
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
 }
 
 .entry-content blockquote p {

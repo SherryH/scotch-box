@@ -15,6 +15,9 @@
     display: block;
 }
                 
+.sub-line-height{
+    line-height: 0.5rem;
+}
 
 @media screen and (max-width: 1539px) and (min-width: 1160px){ 
     .content-area.lander-page {
@@ -35,9 +38,6 @@
     margin: 0 auto;
 }
 
-.section-link{
-    color: red;
-}
 
 
 @media screen and (max-width: 1099px) {
@@ -85,6 +85,9 @@
     line-height: 1.2em;
 }
                 
+.section-link{
+    color: red;
+}
 
 
 /* CONTENT AREA */
@@ -93,7 +96,18 @@
     background: hsl(0, 0%, 100%);
     text-align: center; 
 }
-				
+
+.separation-line{
+    border-width: 0px 0px 1.5px;
+    border-style: none none dashed;
+    margin-bottom: 5rem;
+
+}
+
+/*MAYLORY LIST*/				
+#maylory-list{
+    padding:2.5em 0em 0em 0em;
+}
 
 /*CALL TO ACTION*/ 
 

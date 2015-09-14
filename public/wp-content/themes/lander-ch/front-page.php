@@ -15,7 +15,6 @@ global $more;
 		<main id="main" class="site-main" role="main">
 		<section id="maylory-intro">
 			<div class="indent">
-				<!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/img/maylory-logo.png" alt="Maylory logo"> -->
 				<?php 
 				$query = new WP_Query('pagename= maylory-intro');
 				//The loop
@@ -27,22 +26,38 @@ global $more;
 						echo '<img src="' ;
 						bloginfo('stylesheet_directory'); 
 						echo '/img/maylory-logo.png" alt="Maylory logo">';
-
 						//content of the page
 						the_content( );
-
 						echo '</div>';
 					}
 				}
 				//reset post data otherwise the page will continue running with this query as main query
 				wp_reset_postdata();
 				?>				
-			</div>
-			
+			</div>			
 		</section>
 		<section>
 				<!--maylory terrace-->
 				<img class="u-full-width u-max-full-width no-img-gap" src="<?php bloginfo('stylesheet_directory'); ?>/img/maylory-terrace.png" alt="美洛莉莊園圖片">
+		</section>
+		<section id="maylory-list">
+			<div class="indent">
+				<?php 
+				$query = new WP_Query('pagename= maylory-list');
+				//The loop, this section includes the heading "Our Products"
+				if ($query->have_posts()){
+					while($query-> have_posts()){
+						$query->the_post();
+						echo'<div class="entry-content">';
+						//content of the page
+						the_content( );
+						echo '</div>';
+					}
+				}
+				//reset post data otherwise the page will continue running with this query as main query
+				wp_reset_postdata();
+				?>				
+			</div>				
 		</section>
 		<section id="call-to-action">
 			<div class="indent">

@@ -44,6 +44,14 @@ global $more;
 			<div class="indent">
 				<?php 
 				$query = new WP_Query('pagename= maylory-list');
+
+				//query the maylory product list from posts
+				$args = array (
+					'orderby'=>name,
+					'order'   => 'ASC',
+					'category_name' => 'maylory-product-list'
+					);
+				$queryList = new WP_Query($args);
 				//The loop, this section includes the heading "Our Products"
 				if ($query->have_posts()){
 					while($query-> have_posts()){
@@ -51,6 +59,24 @@ global $more;
 						echo'<div class="entry-content">';
 						//content of the page
 						the_content( );
+
+						if ($queryList->have_posts()){
+							echo '<div class="row">';
+							while ($queryList->have_posts()){
+								$queryList-> the_post();
+								
+								echo '<div class="one-third column">';
+								the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
+								echo '<h6>'. get_the_title().'</h6>';
+								echo '</div>';
+								
+
+							}//end while queryList
+							echo '</div>';
+
+						}//end if queryList
+
+
 						echo '</div>';
 					}
 				}

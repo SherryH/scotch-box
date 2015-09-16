@@ -30,11 +30,13 @@
 
 		
 		add_image_size( 'testimonial-mug', 253, 253, true ); //now when an image is uploaded, wordpress will crop it to 253x253 -but if image is smaller, it wont be expanded to fit 253x253
+		add_image_size( 'maylory-product-list-mug', 170, 145, true ); 
 
 		function exclude_testimonials($query){
 			//if query is not the category testimonials and query is the main query
 			if (!$query->is_category('testimonials') && $query->is_main_query()){
 				$query->set('cat','-4'); //want to exclude category with ID=4 (ID of testimonials category)
+				$query->set('cat','-6'); //want to exclude category with ID=6 (ID of Maylory List category)
 
 			}
 		}

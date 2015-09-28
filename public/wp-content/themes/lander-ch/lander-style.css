@@ -75,6 +75,9 @@
     }
 }
 
+.hide{
+    display:none;
+}
 
 .section-title {
     margin-top: .5rem;

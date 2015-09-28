@@ -58,10 +58,8 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-        <div style="background-image:url('<?php echo( get_header_image() ); ?>')"></div>
-    <figure class="header-image">
-        <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
-    </figure>
+<!--         <div style="background-image:url('<?php echo( get_header_image() ); ?>')"></div> -->
+
 
 
 

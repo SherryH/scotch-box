@@ -12,7 +12,7 @@ global $more;
  ?>
 
 <!--header image which only displays on the front-page.php-->
-    <figure class="header-image">
+    <figure class="header-background header-image u-full-width u-max-full-width">
         <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
     </figure>
 <!--*******************************************************-->
@@ -51,11 +51,15 @@ global $more;
 				<?php 
 				$query = new WP_Query('pagename= maylory-list');
 				//query the maylory product list from posts
+				$products_id = $query->queried_object->ID;
+
 				$args = array (
 					'orderby'=>name,
 					'order'   => 'ASC',
-					'category_name' => 'maylory-product-list'
+					'post_type' => 'page',
+					'post_parent' => $products_id 
 					);
+
 				$queryList = new WP_Query($args);
 
 
@@ -72,7 +76,7 @@ global $more;
 							while ($queryList->have_posts()){
 								$queryList-> the_post();
 								
-								echo '<div class="one-third column">';
+								echo '<div class="display-inline">';
 								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 								the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
 								echo '<h6>'. get_the_title().'</h6>';

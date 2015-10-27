@@ -100,11 +100,14 @@
     text-align: center; 
 }
 
+.display-inline{
+    display: inline-block;
+}
+
 .separation-line{
     border-width: 0px 0px 1.5px;
     border-style: none none dashed;
     margin-bottom: 5rem;
-
 }
 
 /*MAYLORY LIST*/				

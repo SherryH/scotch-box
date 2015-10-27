@@ -152,9 +152,9 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    /*font-weight: 700;*/
     /*font-family: 'Lato', sans-serif;*/
-    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "LiHei Pro","微軟雅黑體","Microsoft YaHei", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
     color: #5A5454;
     /*color: hsl(0, 0%, 0%);*/
     -ms-word-break: break-word;
@@ -878,6 +878,9 @@ a:focus.page-numbers{
 
 .site-branding a { text-decoration: none; }
 
+.header-image {
+    background-color: black;
+}
 .header-image img {
     display: block;
     margin: 0 auto;
@@ -1170,7 +1173,7 @@ a:focus.page-numbers{
     font-size: 20px;
     font-size: 2rem;
     line-height: 2.6em;
-    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
 }
 
 .entry-content blockquote p {
@@ -1771,6 +1774,7 @@ object { max-width: 100%; }
 .front-index-thumbnail img {
     display: block;
     margin: 0 auto;
+    min-width: 100%;
 }
 
 .has-thumbnail {

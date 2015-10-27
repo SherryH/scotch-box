@@ -34,20 +34,25 @@
 
                 <h1 class="menu-toggle"><a href="#"><?php _e( 'Menu', 'simone' ); ?></a></h1>
                 <?php 
-                if (is_front_page()){
-                    //custom menu
-                    //this asks if we have a menu called 'Front page menu'?
-                    //http://www.wpbeginner.com/wp-themes/how-to-style-wordpress-navigation-menus/
-                    //http://sevenspark.com/how-to/how-to-add-a-custom-class-to-a-wordpress-menu-item
                     wp_nav_menu( array( 
                         'menu' => 'Front Page Menu',
                         'container_class' => 'u-pull-right',
                         'menu_class' => 'menu-class menu-font'
-                    ) );                 
-                }else{
-                    //ask if we have a menu displayed in theme location 'Primary'
-                    wp_nav_menu( array( 'theme_location' => 'primary' ) ); 
-                }
+                    ) );   
+                // if (is_front_page()){
+                //     //custom menu
+                //     //this asks if we have a menu called 'Front page menu'?
+                //     //http://www.wpbeginner.com/wp-themes/how-to-style-wordpress-navigation-menus/
+                //     //http://sevenspark.com/how-to/how-to-add-a-custom-class-to-a-wordpress-menu-item
+                //     wp_nav_menu( array( 
+                //         'menu' => 'Front Page Menu',
+                //         'container_class' => 'u-pull-right',
+                //         'menu_class' => 'menu-class menu-font'
+                //     ) );                 
+                // }else{
+                //     //ask if we have a menu displayed in theme location 'Primary'
+                //     wp_nav_menu( array( 'theme_location' => 'primary' ) ); 
+                // }
                 ?>
             </nav><!-- #site-navigation -->
 

@@ -16,10 +16,15 @@
         echo '</div>';
     }
     ?>
-<!-- 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<h6 class="font-thin">特級冷壓初榨橄欖油</h6>
-	</header>-->
+
+    <section>
+    	<div class="indent">
+    		<?php the_content(); 
+    		echo 'col-13 content loop'
+    		?>
+    	</div>
+    </section>
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>

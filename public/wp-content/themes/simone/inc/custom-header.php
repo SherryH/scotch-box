@@ -15,7 +15,7 @@ function simone_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'simone_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 960,
+		'width'                  => 1200,
 		'height'                 => 600,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'simone_header_style',

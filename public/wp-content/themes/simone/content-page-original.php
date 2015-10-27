@@ -16,10 +16,9 @@
         echo '</div>';
     }
     ?>
-<!-- 	<header class="entry-header">
+	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<h6 class="font-thin">特級冷壓初榨橄欖油</h6>
-	</header>-->
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -30,4 +29,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php edit_post_link( __( 'Edit', 'simone' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

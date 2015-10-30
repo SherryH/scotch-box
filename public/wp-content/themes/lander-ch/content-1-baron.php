@@ -10,20 +10,12 @@
         <?php 
     if (has_post_thumbnail()) {
         echo '<div class="single-post-thumbnail clear">';
-        echo '<div class="image-shifter">';
+        // echo '<div class="image-shifter">';
         simone_the_responsive_thumbnail( get_the_ID() );
-        echo '</div>';
+        // echo '</div>';
         echo '</div>';
     }
     ?>
-
-    <section>
-    	<div class="indent">
-    		<?php the_content(); 
-    		echo 'col-13 content loop'
-    		?>
-    	</div>
-    </section>
 
 
 	<div class="entry-content">

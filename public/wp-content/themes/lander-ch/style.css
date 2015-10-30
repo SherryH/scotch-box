@@ -8,3 +8,68 @@ Template: Simone
 
 /*import style from parent theme*/
 @import url('../simone/style.css');
+
+
+/*Css on the single oil product pages  */
+
+.product-description{
+    padding-top: 7em;
+}
+
+.product-description h1{
+	font-size: 52px;
+    font-size: 5.2rem;
+    color: black;
+    /*display: inline;*/ /*if apply here to inline subtitle, stretched title will lose effect*/
+}
+
+.product-description p{
+	color: black;
+	line-height: 1.6em;
+    font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+}
+
+.product-image{
+	height: 500px;
+	text-align: center;
+}
+
+.product-image img{
+	max-height: 100%;
+}
+
+.stretch{
+	width: 300px;
+}
+
+
+.subtitle-ch{
+	font-size: 22px;
+    font-size: 2.2rem;
+    padding-top: 7px;
+    padding-top: 0.7rem;
+}
+
+.subtitle-en{
+	font-size: 27px;
+    font-size: 2.7rem;
+    padding-top: 7px;
+    padding-top: 0.7rem;
+    font-weight: 300;
+}
+
+.impt{
+	color: red;
+}
+
+/**** stretch the product title across the div=> e.g. 皇    爵 *****/
+.stretch-container{
+	padding: 10px 0;
+}
+.stretch_it{
+    white-space: nowrap;
+}
+.justify{
+    text-align:justify;
+}
+/****-----------------------------------------------------------**** /

@@ -829,6 +829,9 @@ a:focus.page-numbers{
     .alignright { margin-right: -160px; }
 }
 
+
+
+
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
@@ -884,6 +887,7 @@ a:focus.page-numbers{
 .header-image img {
     display: block;
     margin: 0 auto;
+    min-width: 100%;
 }
 
 .header-background-image {

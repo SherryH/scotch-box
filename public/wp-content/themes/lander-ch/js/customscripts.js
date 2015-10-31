@@ -16,7 +16,6 @@ jQuery.fn.strech_text = function(){
         jQuery(this).html(txt);
     }else{
         var txt           = elmt.html();
-        console.log("txt: "+txt);
     }
 
     var one_line      = jQuery('<span class="stretch_it">' + txt + '</span>'),

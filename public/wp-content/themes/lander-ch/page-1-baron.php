@@ -28,6 +28,9 @@ get_header(); ?>
 			<!--Display 2nd product section on the page:世界文化遺產橄欖樹 -->
 			<?php include 'content-product-section2.php'; ?>
 
+			<!--Display 3nd product section on the page: D.O.P -->
+			<?php include 'content-product-section3.php'; ?>
+
 
 
 		</main><!-- #main -->

@@ -12,8 +12,12 @@ Template: Simone
 
 /*Css on the single oil product pages  */
 
-.product-description{
-    padding-top: 7em;
+.section-container{
+	margin-top: 5em;
+}
+
+.lower-title{
+	margin-top: 5em;
 }
 
 .product-description h1{
@@ -24,8 +28,10 @@ Template: Simone
 }
 
 .product-description p{
+	font-size: 20px;
+    font-size: 2.0rem;
 	color: black;
-	line-height: 1.6em;
+	line-height: 1.8em;
     font-family: 'Lato',"文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
 }
 
@@ -36,6 +42,10 @@ Template: Simone
 
 .product-image img{
 	max-height: 100%;
+}
+
+.section-image-m{
+	height: 300px;
 }
 
 .stretch{
@@ -58,13 +68,18 @@ Template: Simone
     font-weight: 300;
 }
 
+.title-image img{
+	max-width: 200px;
+	float:left;
+}
+
 .impt{
 	color: red;
 }
 
 /**** stretch the product title across the div=> e.g. 皇    爵 *****/
 .stretch-container{
-	padding: 10px 0;
+
 }
 .stretch_it{
     white-space: nowrap;

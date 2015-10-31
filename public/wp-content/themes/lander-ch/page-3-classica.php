@@ -25,9 +25,6 @@ get_header(); ?>
 			<!--Display product section on the page-->
 			<?php include 'content-product-section.php'; ?>
 
-			<!--Display 2nd product section on the page:世界文化遺產橄欖樹 -->
-			<?php include 'content-product-section2.php'; ?>
-
 
 
 		</main><!-- #main -->

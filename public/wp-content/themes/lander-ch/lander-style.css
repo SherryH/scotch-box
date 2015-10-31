@@ -1,4 +1,4 @@
-
+/*  This stylesheet is only applied on front-page.php and page-about-maylory.php*/
 .main-navigation.sticky-header {
     position: fixed;
     width: 100%;
@@ -36,6 +36,10 @@
 .indent {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.center-container{
+    margin:0 auto;
 }
 
 

@@ -27,10 +27,11 @@
 
 
 		function lander_scripts() {
-			if (is_front_page()){
+			if (is_front_page()||is_page('about-maylory')){
 				wp_enqueue_style( 'lander-style', get_stylesheet_directory_uri().'/lander-style.css');
 				wp_enqueue_script( 'lander-script', get_stylesheet_directory_uri().'/js/landerscripts.js', array('jquery'), 20150714);
 			}
+			wp_reset_query();
 		}
 		add_action( 'wp_enqueue_scripts', 'lander_scripts' );
 

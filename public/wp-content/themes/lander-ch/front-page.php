@@ -22,23 +22,23 @@ global $more;
 		<section id="maylory-intro">
 			<div class="indent">
 				<?php 
-				$query = new WP_Query('pagename= maylory-intro');
-				//The loop
-				if ($query->have_posts()){
-					while($query-> have_posts()){
-						$query->the_post();
-						echo'<div class="entry-content">';
-						//<!--mayloy logo-->
-						echo '<img src="' ;
-						bloginfo('stylesheet_directory'); 
-						echo '/img/maylory-logo.png" alt="Maylory logo">';
-						//content of the page
-						the_content( );
-						echo '</div>';
+					$query = new WP_Query('pagename= maylory-intro');
+					//The loop
+					if ($query->have_posts()){
+						while($query-> have_posts()){
+							$query->the_post();
+							echo'<div class="entry-content">';
+							//<!--mayloy logo-->
+							echo '<img src="' ;
+							bloginfo('stylesheet_directory'); 
+							echo '/img/maylory-logo.png" alt="Maylory logo">';
+							//content of the page
+							the_content( );
+							echo '</div>';
+						}
 					}
-				}
-				//reset post data otherwise the page will continue running with this query as main query
-				wp_reset_postdata();
+					//reset post data otherwise the page will continue running with this query as main query
+					wp_reset_postdata();
 				?>				
 			</div>			
 		</section>

@@ -20,6 +20,10 @@ Template: Simone
 	margin-top: 5em;
 }
 
+.lower-title-s{
+	margin-top: 2.5em;
+}
+
 .product-description h1{
 	font-size: 52px;
     font-size: 5.2rem;
@@ -47,6 +51,8 @@ Template: Simone
 .section-image-m{
 	height: 300px;
 }
+
+
 
 .stretch{
 	width: 300px;
@@ -76,6 +82,42 @@ Template: Simone
 .impt{
 	color: red;
 }
+
+
+
+/*----------------about Maylory page------------------*/
+.informative-heading{
+	text-decoration: underline;
+}
+
+.entry-content .informative-text{
+	line-height: 1.2em;
+}
+
+
+
+
+/*-----  9 star cook page -------------*/
+.starcookoil{
+	height: 500px;
+	float:left;
+	vertical-align: top;
+}
+
+.starcookoil img{
+    float: left;
+    margin-top: -13em;
+    max-height:60%;
+    width: auto;
+    height: auto;
+}
+
+.starcookoil-text img{
+	max-width:2.0em;
+	height:auto;
+	margin-bottom: -5px
+}
+
 
 /**** stretch the product title across the div=> e.g. 皇    爵 *****/
 .stretch-container{

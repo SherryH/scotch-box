@@ -49,50 +49,50 @@ global $more;
 		<section id="maylory-list">
 			<div class="indent">
 				<?php 
-				$query = new WP_Query('pagename= maylory-list');
-				//query the maylory product list from posts
-				$products_id = $query->queried_object->ID;
+					$query = new WP_Query('pagename= maylory-list');
+					//query the maylory product list from posts
+					$products_id = $query->queried_object->ID;
 
-				$args = array (
-					'orderby'=>name,
-					'order'   => 'ASC',
-					'post_type' => 'page',
-					'post_parent' => $products_id 
-					);
+					$args = array (
+						'orderby'=>name,
+						'order'   => 'ASC',
+						'post_type' => 'page',
+						'post_parent' => $products_id 
+						);
 
-				$queryList = new WP_Query($args);
+					$queryList = new WP_Query($args);
 
 
-				//The loop, this section includes the heading "Our Products"
-				if ($query->have_posts()){
-					while($query-> have_posts()){
-						$query->the_post();
-						echo'<div class="entry-content">';
-						//content of the page
-						the_content( );
+					//The loop, this section includes the heading "Our Products"
+					if ($query->have_posts()){
+						while($query-> have_posts()){
+							$query->the_post();
+							echo'<div class="entry-content">';
+							//content of the page
+							the_content( );
 
-						if ($queryList->have_posts()){
-							echo '<div class="row">';
-							while ($queryList->have_posts()){
-								$queryList-> the_post();
-								
-								echo '<div class="display-inline">';
-								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
-								the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
-								echo '<h6>'. get_the_title().'</h6>';
-								echo '</a>';
+							if ($queryList->have_posts()){
+								echo '<div class="row">';
+								while ($queryList->have_posts()){
+									$queryList-> the_post();
+									
+									echo '<div class="display-inline">';
+									echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
+									the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
+									echo '<h6>'. get_the_title().'</h6>';
+									echo '</a>';
+									echo '</div>';
+								}//end while queryList
 								echo '</div>';
-							}//end while queryList
+
+							}//end if queryList
+
+
 							echo '</div>';
-
-						}//end if queryList
-
-
-						echo '</div>';
+						}
 					}
-				}
-				//reset post data otherwise the page will continue running with this query as main query
-				wp_reset_postdata();
+					//reset post data otherwise the page will continue running with this query as main query
+					wp_reset_postdata();
 				?>		
 
 

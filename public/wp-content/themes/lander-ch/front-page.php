@@ -78,7 +78,8 @@ global $more;
 									
 									echo '<div class="display-inline">';
 									echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
-									the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
+									// the_post_thumbnail('maylory-product-list-mug'); //set in functions.php
+									 the_post_thumbnail('testimonial-mug'); //set in functions.php
 									echo '<h6>'. get_the_title().'</h6>';
 									echo '</a>';
 									echo '</div>';

@@ -63,7 +63,7 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-<!--         <div style="background-image:url('<?php echo( get_header_image() ); ?>')"></div> -->
+         <div style="background-image:url('<?php echo( get_header_image() ); ?>')"></div> 
 
 
 
